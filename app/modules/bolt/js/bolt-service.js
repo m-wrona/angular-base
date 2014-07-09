@@ -106,7 +106,11 @@ services.service('Session', function ($cookieStore, USER_ROLES, $log) {
     this.destroy = function () {
         $log.debug('Deleting session - USER: ' + _currentUser.userId);
         $cookieStore.remove('currentUser');
-        _currentUser = null;
+        _currentUser = {
+            'token': null,
+            'userId': null,
+            'userRole': USER_ROLES.GUEST
+        };
     };
 
     return this;
