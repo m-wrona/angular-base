@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angular-base">
+<head>
+    <title>Angular - base</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <!-- css -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div>
+    <div>
+        <nav>
+            <ul>
+                <li>
+                    <a ui-sref="login">Login page</a>
+                </li>
+                <li>
+                    <a ui-sref="public">Public</a>
+                </li>
+                <li>
+                    <a ui-sref="private">Private</a>
+                </li>
+                <li>
+                    <a ui-sref="admin">Admin page</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- page context -->
+        <div ng-view></div>
+        <div ui-view></div>
+        <div>Angular-base: v<span app-version></span></div>
+    </div>
+</div>
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="modules/bolt/js/bolt-app.js"></script>
+<script src="modules/bolt/js/bolt-controller.js"></script>
+<script src="modules/bolt/js/bolt-service.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/routes.js"></script>
+</body>
+</html>
