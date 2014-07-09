@@ -11,6 +11,7 @@ var module = angular.module('angular-base',
         'ngRoute',
         'ngCookies',
         'bolt',
+        'pascalprecht.translate',
         /*
          * Internal modules
          */
@@ -21,6 +22,15 @@ var module = angular.module('angular-base',
         'angular-base.routes'
     ]
 ).
+    /* configure language settings */
+    config(function ($translateProvider) {
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'lang/',
+            suffix: '.json'
+        });
+        $translateProvider.preferredLanguage('en');
+        $translateProvider.useCookieStorage(); //store lang in cookies
+    }).
     value('version', '0.0.1');
 
 //register authentication interceptor in order to perform

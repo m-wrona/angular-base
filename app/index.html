@@ -14,6 +14,10 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 <div>
+    <div ng-controller="LangCtrl">
+        <button ng-click="changeLanguage('en')" translate="lang.en"></button>
+        <button ng-click="changeLanguage('pl')" translate="lang.pl"></button>
+    </div>
     <div>
         <nav>
             <ul>
@@ -47,6 +51,9 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
 <script src="modules/bolt/js/bolt-app.js"></script>
 <script src="modules/bolt/js/bolt-controller.js"></script>
 <script src="modules/bolt/js/bolt-service.js"></script>

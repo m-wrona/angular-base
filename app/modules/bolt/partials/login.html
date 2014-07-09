@@ -1,10 +1,10 @@
 <div ng-app="bolt" ng-controller="LoginCtrl">
     <form name="loginForm" ng-submit="login(credentials)" novalidate>
-        <label for="username">Username:</label>
+        <label for="username" translate>login.username</label>
         <input type="text" id="username" ng-model="credentials.username">
-        <label for="password">Password:</label>
+        <label for="password" translate>login.password</label>
         <input type="password" id="password" ng-model="credentials.password">
-        <button type="submit">Login</button>
+        <button type="submit" translate>login.login</button>
     </form>
-    <div>{{loginMessage}}</div>
+    <div>{{loginMessage | translate}}</div>
 </div>

@@ -1,0 +1,17 @@
+{
+    "lang": {
+        "en": "English",
+        "pl": "Polish"
+    },
+    "generic": {
+        "welcome-public": "Public page for not logged in users",
+        "generic.welcome-private": "Private page for logged in users",
+        "generic.welcome-admin": "Private page for admins only"
+    },
+    "login": {
+        "username": "Username: ",
+        "password": "Password: ",
+        "login": "Login",
+        "wrongCredentials": "'Wrong login and/or password'"
+    }
+}

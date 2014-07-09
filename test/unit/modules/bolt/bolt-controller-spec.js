@@ -99,7 +99,7 @@ describe('bolt-controller-spec - Login controller:', function () {
             spyRootScope.$apply();
             //then proper log appears
             expect(mockLog.debug).toHaveBeenCalledWith('Logging in USER: johny@bravo.com');
-            expect(ctrlScope.loginMessage).toBe('Wrong login and/or password');
+            expect(ctrlScope.loginMessage).toBe('login.wrongCredentials');
             //and proper broadcast event is sent
             expect(spyRootScope.$broadcast).toHaveBeenCalledWith(mockAuthEvents.LOGIN_FAILED);
         });

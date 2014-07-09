@@ -6,6 +6,7 @@ Kick-off project for AngularJS with set project structure and basic modules (aut
 ## Modules
 
 * bolt: authentication & authorization
+* language support
 
 ## Tasks
 

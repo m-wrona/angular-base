@@ -32,7 +32,7 @@ controllers.controller('LoginCtrl', function ($rootScope, $scope, AuthService, A
             $scope.loginMessage = '';
         }, function () {
             $rootScope.$broadcast(AUTH_EVENTS.LOGIN_FAILED);
-            $scope.loginMessage = 'Wrong login and/or password';
+            $scope.loginMessage = 'login.wrongCredentials';
         });
     };
     /**
