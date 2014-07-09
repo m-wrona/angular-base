@@ -11,20 +11,20 @@ Kick-off project for AngularJS with set project structure and basic modules (aut
    $npm install
 ```
 
-### Run unit tests
+#### Run unit tests
 
 ```shell
    $npm test
 ```
 
-### Run e2e tests
+#### Run e2e tests
 
 ```shell
    $npm start
    $npm run protractor
 ```
 
-### Run application locally
+#### Run application locally
 
 ```shell
    $npm start
