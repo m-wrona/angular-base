@@ -1,0 +1,17 @@
+{
+    "lang": {
+        "en": "Angielski",
+        "pl": "Polski"
+    },
+    "generic": {
+        "welcome-public": "Strona publiczna dla wszystkich uzytkownikow",
+        "generic.welcome-private": "Strona chroniona dla klientow",
+        "generic.welcome-admin": "Strona chroniona dla administratorow"
+    },
+    "login": {
+        "username": "Uzytkownik: ",
+        "password": "Haslo: ",
+        "login": "Zaloguj",
+        "wrongCredentials": "'Zly login i/lub haslo'"
+    }
+}
