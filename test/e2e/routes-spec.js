@@ -37,7 +37,7 @@ describe('routes-spec:', function () {
             expect(browser.getLocationAbsUrl()).toMatch("/#/login");
         });
 
-        it('should allow logged in user to enter private page', function () {
+        it('should allow client user to enter private page', function () {
             //given user is logged in
             browser.addMockModule('angular-base', function () {
                 angular.module('angular-base').run(function (Session, USER_ROLES) {
@@ -75,7 +75,7 @@ describe('routes-spec:', function () {
             expect(browser.getLocationAbsUrl()).toMatch("/#/login");
         });
 
-        it('should deny logged in user to enter admin page', function () {
+        it('should deny client user to enter admin page', function () {
             //given user is logged in but has no admin rights
             browser.addMockModule('angular-base', function () {
                 angular.module('angular-base').run(function (Session, USER_ROLES) {
