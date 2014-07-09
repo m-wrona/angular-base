@@ -3,6 +3,10 @@ angular-base
 
 Kick-off project for AngularJS with set project structure and basic modules (authentication, authorization, etc.)
 
+## Modules
+
+* bolt: authentication & authorization
+
 ## Tasks
 
 #### Install dependencies
@@ -28,4 +32,10 @@ Kick-off project for AngularJS with set project structure and basic modules (aut
 
 ```shell
    $npm start
+```
+
+#### Update index-async 
+
+```shell
+   $npm run update-index-async
 ```
