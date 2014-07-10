@@ -1,7 +1,8 @@
 angular-base
 ============
 
-Kick-off project for AngularJS with set project structure and basic modules (authentication, authorization, etc.)
+Kick-off project for AngularJS with set project structure and basic modules (authentication, authorization, etc.).
+Project contains also unit and e2e tests for the most important part of functionality.
 
 ## Modules
 
