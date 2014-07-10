@@ -28,6 +28,13 @@ routes.config(function ($stateProvider, $urlRouterProvider, ACCESS_LEVELS) {
             data: {
                 access: ACCESS_LEVELS.PUBLIC
             }
+        }).
+        state('dashboard', {
+            url: "/dashboard",
+            templateUrl: "/app/modules/dashboard/partials/dashboard.html",
+            data: {
+                access: ACCESS_LEVELS.PUBLIC
+            }
         });
     //
     // access level: USER (logged in users)

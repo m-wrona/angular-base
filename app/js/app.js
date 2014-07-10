@@ -12,6 +12,7 @@ var module = angular.module('angular-base',
         'ngCookies',
         'bolt',
         'pascalprecht.translate',
+        'dashboard',
         /*
          * Internal modules
          */
