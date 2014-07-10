@@ -2,6 +2,36 @@
 
 var widgets = angular.module('dashboard-widgets', []);
 
+/**
+ * Define sample data model for widgets
+ * @param $interval component for executing functions every n ms
+ * @param WidgetDataModel prototype of data model
+ */
+widgets.factory('RandomDataModel', function ($interval, WidgetDataModel) {
+
+    function RandomDataModel() {
+        //empty
+    }
+
+    RandomDataModel.prototype = Object.create(WidgetDataModel.prototype);
+
+    RandomDataModel.prototype.init = function () {
+        this.updateScope('-');
+        this.intervalPromise = $interval(function () {
+            var value = Math.floor(Math.random() * 100);
+            this.updateScope(value);
+        }.bind(this), 500);
+    };
+
+    RandomDataModel.prototype.destroy = function () {
+        WidgetDataModel.prototype.destroy.call(this);
+        $interval.cancel(this.intervalPromise);
+    };
+
+    return RandomDataModel;
+});
+
+/*********************** widgets available to be placed on dashboard **************************/
 widgets.factory('widgetDefinitions', function (RandomDataModel) {
     return [
         {
@@ -24,30 +54,6 @@ widgets.factory('widgetDefinitions', function (RandomDataModel) {
     ];
 });
 
-widgets.factory('RandomDataModel', function ($interval, WidgetDataModel) {
-
-    function RandomDataModel() {
-    }
-
-    RandomDataModel.prototype = Object.create(WidgetDataModel.prototype);
-
-    RandomDataModel.prototype.init = function () {
-        this.updateScope('-');
-        this.intervalPromise = $interval(function () {
-            var value = Math.floor(Math.random() * 100);
-            this.updateScope(value);
-        }.bind(this), 500);
-    };
-
-    RandomDataModel.prototype.destroy = function () {
-        WidgetDataModel.prototype.destroy.call(this);
-        $interval.cancel(this.intervalPromise);
-    };
-
-    return RandomDataModel;
-});
-
-/*********************** widgets **************************/
 widgets.
     directive('wtTime', function ($interval) {
         return {

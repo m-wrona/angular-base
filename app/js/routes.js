@@ -32,6 +32,7 @@ routes.config(function ($stateProvider, $urlRouterProvider, ACCESS_LEVELS) {
         state('dashboard', {
             url: "/dashboard",
             templateUrl: "/app/modules/dashboard/partials/dashboard.html",
+            controller: 'DashboardCtrl',
             data: {
                 access: ACCESS_LEVELS.PUBLIC
             }

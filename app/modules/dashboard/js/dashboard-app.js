@@ -11,7 +11,9 @@ var dashboard = angular.module('dashboard',
     ]
 );
 
-
+/**
+ * Define default widgets
+ */
 dashboard
     .value('defaultWidgets', [
         { name: 'random' },
