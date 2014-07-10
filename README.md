@@ -7,7 +7,7 @@ Kick-off project for AngularJS with set project structure and basic modules (aut
 
 * authentication & authorization (module: bolt)
 * language support
-* dashboard (sample widgets defined)
+* dashboard for widget management (sample widgets defined)
 
 ## Tasks
 
