@@ -32,7 +32,7 @@ var module = angular.module('angular-base',
         $translateProvider.preferredLanguage('en');
         $translateProvider.useCookieStorage(); //store lang in cookies
     }).
-    value('version', '0.0.1');
+    value('version', '0.0.2');
 
 //register authentication interceptor in order to perform
 // default actions related with incoming and outgoing communication
