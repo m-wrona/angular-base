@@ -12,6 +12,9 @@ module.exports = function (config) {
             'app/bower_components/angular-translate/angular-translate.js',
             'app/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
             'app/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
+            'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+            'app/bower_components/angular-ui-sortable/sortable.js',
+            'app/bower_components/angular-ui-dashboard/dist/angular-ui-dashboard.js',
             /* test dependencies */
             'app/bower_components/angular-mocks/angular-mocks.js',
             /* tested components */
