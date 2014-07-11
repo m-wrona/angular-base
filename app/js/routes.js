@@ -17,21 +17,21 @@ routes.config(function ($stateProvider, $urlRouterProvider, ACCESS_LEVELS) {
     $stateProvider.
         state('login', {
             url: "/login",
-            templateUrl: "/app/modules/bolt/partials/login.html",
+            templateUrl: "modules/bolt/partials/login.html",
             data: {
                 access: ACCESS_LEVELS.PUBLIC
             }
         }).
         state('public', {
             url: "/public",
-            templateUrl: "/app/partials/public.html",
+            templateUrl: "partials/public.html",
             data: {
                 access: ACCESS_LEVELS.PUBLIC
             }
         }).
         state('dashboard', {
             url: "/dashboard",
-            templateUrl: "/app/modules/dashboard/partials/dashboard.html",
+            templateUrl: "modules/dashboard/partials/dashboard.html",
             controller: 'DashboardCtrl',
             data: {
                 access: ACCESS_LEVELS.PUBLIC
@@ -42,7 +42,7 @@ routes.config(function ($stateProvider, $urlRouterProvider, ACCESS_LEVELS) {
     $stateProvider.
         state('private', {
             url: "/private",
-            templateUrl: "/app/partials/private.html",
+            templateUrl: "partials/private.html",
             data: {
                 access: ACCESS_LEVELS.USER
             }
@@ -52,7 +52,7 @@ routes.config(function ($stateProvider, $urlRouterProvider, ACCESS_LEVELS) {
     $stateProvider.
         state('admin', {
             url: "/admin",
-            templateUrl: "/app/partials/admin.html",
+            templateUrl: "partials/admin.html",
             data: {
                 access: ACCESS_LEVELS.ADMIN
             }
