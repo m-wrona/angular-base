@@ -6,4 +6,5 @@
         <input type="password" id="password" ng-model="credentials.password">
         <button class="btn" type="submit" translate>login.login</button>
     </form>
+    <ui-notify event="auth-login-failed" type="warning" message="{{'login.wrongCredentials' | translate}}"/>
 </div>

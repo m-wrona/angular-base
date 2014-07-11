@@ -79,8 +79,7 @@ describe('bolt-controller-spec - Login controller:', function () {
             deferredAuthService.resolve();
             spyRootScope.$apply();
             //then proper log appears
-            expect(mockLog.debug).toHaveBeenCalledWith('Logging in USER: johny@bravo.com');
-            expect(ctrlScope.loginMessage).toBe('');
+            expect(mockLog.debug).toHaveBeenCalledWith('Logging in user: johny@bravo.com');
             //and proper broadcast event is sent
             expect(spyRootScope.$broadcast).toHaveBeenCalledWith(mockAuthEvents.USER_LOGGED_IN);
         });
@@ -98,8 +97,7 @@ describe('bolt-controller-spec - Login controller:', function () {
             deferredAuthService.reject();
             spyRootScope.$apply();
             //then proper log appears
-            expect(mockLog.debug).toHaveBeenCalledWith('Logging in USER: johny@bravo.com');
-            expect(ctrlScope.loginMessage).toBe('login.wrongCredentials');
+            expect(mockLog.debug).toHaveBeenCalledWith('Logging in user: johny@bravo.com');
             //and proper broadcast event is sent
             expect(spyRootScope.$broadcast).toHaveBeenCalledWith(mockAuthEvents.LOGIN_FAILED);
         });

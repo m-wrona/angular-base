@@ -8,33 +8,25 @@ var controllers = angular.module('bolt.controllers', ['ui-notifications']);
  * @param $scope Angie's current scope
  * @param AuthService service for managing user's session
  * @param AUTH_EVENTS list of authentication events
- * @param $modal modal pop-up window
  * @param $log Angie's logger component
  */
-controllers.controller('LoginCtrl', function ($rootScope, $scope, AuthService, AUTH_EVENTS, uiNotification, $log) {
+controllers.controller('LoginCtrl', function ($rootScope, $scope, AuthService, AUTH_EVENTS, $log) {
     $scope.credentials = {
         username: '',
         password: ''
 
     };
-    /**
-     * Message displayed during login process, for instance when login or password is incorrect
-     * @type {string}
-     */
-    $scope.loginMessage = '';
+
     /**
      * Login user with given credentials
      * @param credentials user's login and password
      */
     $scope.login = function (credentials) {
-        $log.debug('Logging in USER: ' + credentials.username);
+        $log.debug('Logging in user: ' + credentials.username);
         AuthService.login(credentials).then(function () {
             $rootScope.$broadcast(AUTH_EVENTS.USER_LOGGED_IN);
-            $scope.loginMessage = '';
         }, function () {
             $rootScope.$broadcast(AUTH_EVENTS.LOGIN_FAILED);
-            $scope.loginMessage = 'login.wrongCredentials';
-            uiNotification.translate('login.login', 'login.wrongCredentials').warning();
         });
     };
     /**

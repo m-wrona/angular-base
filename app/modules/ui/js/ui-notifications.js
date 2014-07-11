@@ -68,3 +68,36 @@ ui.service('uiNotification', function ($translate) {
     return this;
 
 });
+
+/**
+ * Directive displays chosen message when proper event is dispatched.
+ * Directive is configured using following attributes:
+ * event: name of event that broadcasting should trigger displaying of notification
+ * type: type of notification to be displayed defined by uiNotification component (default: info)
+ * message: text to be displayed in notification
+ * @param uiNotification component managing notifications on UI
+ */
+ui.directive('uiNotify', function (uiNotification) {
+
+    return {
+        restrict: 'E',
+        template: '',
+        scope: {
+            event: '@',
+            type: '@',
+            message: '@'
+        },
+        link: function ($scope, elm, attrs) {
+            $scope.$on($scope.event, function () {
+                //check type of notification to be displayed
+                var notificationType = $scope.type;
+                if (notificationType === undefined) {
+                    notificationType = 'info';
+                }
+                //show notification
+                uiNotification.text('', $scope.message)[notificationType]();
+            });
+        }
+    }
+    
+});
