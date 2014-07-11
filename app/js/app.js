@@ -13,6 +13,7 @@ var module = angular.module('angular-base',
         'bolt',
         'pascalprecht.translate',
         'dashboard',
+        'ui.bootstrap',
         /*
          * Internal modules
          */

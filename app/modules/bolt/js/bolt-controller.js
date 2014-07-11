@@ -1,6 +1,6 @@
 'use strict';
 
-var controllers = angular.module('bolt.controllers', []);
+var controllers = angular.module('bolt.controllers', ['ui-notifications']);
 
 /**
  * Controller manages user's login/logout process
@@ -8,9 +8,10 @@ var controllers = angular.module('bolt.controllers', []);
  * @param $scope Angie's current scope
  * @param AuthService service for managing user's session
  * @param AUTH_EVENTS list of authentication events
+ * @param $modal modal pop-up window
  * @param $log Angie's logger component
  */
-controllers.controller('LoginCtrl', function ($rootScope, $scope, AuthService, AUTH_EVENTS, $log) {
+controllers.controller('LoginCtrl', function ($rootScope, $scope, AuthService, AUTH_EVENTS, uiNotification, $log) {
     $scope.credentials = {
         username: '',
         password: ''
@@ -33,6 +34,7 @@ controllers.controller('LoginCtrl', function ($rootScope, $scope, AuthService, A
         }, function () {
             $rootScope.$broadcast(AUTH_EVENTS.LOGIN_FAILED);
             $scope.loginMessage = 'login.wrongCredentials';
+            uiNotification.translate('login.login', 'login.wrongCredentials').warning();
         });
     };
     /**
@@ -45,3 +47,22 @@ controllers.controller('LoginCtrl', function ($rootScope, $scope, AuthService, A
         }
     }
 });
+
+// Please note that $modalInstance represents a modal window (instance) dependency.
+// It is not the same as the $modal service used above.
+
+var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
+
+    $scope.items = items;
+    $scope.selected = {
+        item: $scope.items[0]
+    };
+
+    $scope.ok = function () {
+        $modalInstance.close($scope.selected.item);
+    };
+
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
+};

@@ -9,6 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/angular-ui-dashboard/dist/angular-ui-dashboard.css">
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
@@ -18,35 +19,22 @@
 <![endif]-->
 <div>
     <div ng-controller="LangCtrl">
-        <button ng-click="changeLanguage('en')" translate="lang.en"></button>
-        <button ng-click="changeLanguage('pl')" translate="lang.pl"></button>
+        <a class="btn btn-success" ng-click="changeLanguage('en')" translate="lang.en"></a>
+        <a class="btn btn-success" ng-click="changeLanguage('pl')" translate="lang.pl"></a>
+        <a class="btn btn-primary" ui-sref="login">Login page</a>
+        <a class="btn btn-primary" ui-sref="public">Public</a>
+        <a class="btn btn-primary" ui-sref="private">Private</a>
+        <a class="btn btn-primary" ui-sref="admin">Admin page</a>
+        <a class="btn btn-primary" ui-sref="dashboard">Dashboard</a>
     </div>
-    <div>
-        <nav>
-            <ul>
-                <li>
-                    <a ui-sref="login">Login page</a>
-                </li>
-                <li>
-                    <a ui-sref="public">Public</a>
-                </li>
-                <li>
-                    <a ui-sref="private">Private</a>
-                </li>
-                <li>
-                    <a ui-sref="admin">Admin page</a>
-                </li>
-                <li>
-                    <a ui-sref="dashboard">Dashboard</a>
-                </li>
-            </ul>
-        </nav>
-
+    <div>&nbsp;</div>
+    <div class="well well-lg">
         <!-- page context -->
         <div ng-view></div>
         <div ui-view></div>
-        <div>Angular-base: v<span app-version></span></div>
     </div>
+    <div>&nbsp;</div>
+    <div>Angular-base: v<span app-version></span></div>
 </div>
 
 
@@ -56,6 +44,7 @@
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+<script src="bower_components/toastr/toastr.js"></script>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
@@ -75,6 +64,8 @@
 <script src="modules/dashboard/js/dashboard-app.js"></script>
 <script src="modules/dashboard/js/dashboard-controller.js"></script>
 <script src="modules/dashboard/js/dashboard-widgets.js"></script>
+
+<script src="modules/ui/js/ui-notifications.js"></script>
 
 <script src="js/app.js"></script>
 <script src="js/services.js"></script>
