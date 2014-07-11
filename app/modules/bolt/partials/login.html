@@ -4,7 +4,7 @@
         <input type="text" id="username" ng-model="credentials.username">
         <label for="password" translate>login.password</label>
         <input type="password" id="password" ng-model="credentials.password">
-        <button type="submit" translate>login.login</button>
+        <button class="btn" type="submit" translate>login.login</button>
     </form>
-    <div>{{loginMessage | translate}}</div>
+    <ui-notify event="auth-login-failed" type="warning" message="{{'login.wrongCredentials' | translate}}"/>
 </div>
