@@ -1,0 +1,30 @@
+{
+  "name": "malhar-angular-dashboard",
+  "main": "./dist/angular-ui-dashboard.js",
+  "version": "0.3.2",
+  "license": "Apache License, v2.0",
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2",
+    "angular": "~1.2.6",
+    "angular-bootstrap": "0.9.0",
+    "angular-ui-sortable": "~0.12.8",
+    "jquery-ui": "~1.10.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.1",
+    "bootstrap": "~3.0.3",
+    "angular-bootstrap": "0.9.0",
+    "angular-route": "~1.2.15"
+  },
+  "homepage": "https://github.com/nickholub/angular-ui-dashboard",
+  "_release": "0.3.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.2",
+    "commit": "d9ace4dd8a490f2657835d634ec3229a5a40514c"
+  },
+  "_source": "git://github.com/nickholub/angular-ui-dashboard.git",
+  "_target": "0.3.x",
+  "_originalSource": "angular-ui-dashboard"
+}
